@@ -6,21 +6,31 @@
         <title>João Silva Portfolio</title>
         <link rel="stylesheet" href="style.css">
 
+        <meta property="og:type" content="profile">
+        <meta property="og:title" content="João Silva Portfolio">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="Find out more about me and my career!">
+        <meta property="profile:first_name" content="João">
+        <meta property="profile:last_name" content="Silva">
+        <meta property="profile:username" content="imjoaosilva">
+
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="top">&nbsp;</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#">Experience</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <section class="home">
+        <section id="home">
             <div class="avatar">
                 <img src="assets/Avatar.gif" alt="Avatar">
             </div>
@@ -36,11 +46,11 @@
             </p>
 
             <div class="buttons">
-                <button class="primary-button">Get in Touch</button>
-                <button class="secondary-button">Github</button>
+                <button class="primary-button" onclick="window.open('mailto:contactojoaosilva@gmail.com')">Get in Touch</button>
+                <button class="secondary-button" onclick="window.open('https://github.com/imjoaosilva')">Github</button>
             </div>
         </section>
-        <section class="experiences">
+        <section id="experiences">
             <h1>experience with</h1>
 
             <div class="techs">
@@ -57,7 +67,7 @@
                 
             </div>
         </section>
-        <section class="projects">
+        <section id="projects">
             <h1>Projects</h1>
             <div class="projects-container">
                 <div class="project" 
@@ -65,11 +75,15 @@
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                 >
-                    <img id="banner" src="assets/projects/project-thumbnail-1.png" alt="Project 1">
+                    <img id="banner" src="assets/projects/serenity-bot.jpg" alt="Project 1">
+
+                    <div class="project-tech">
+                        <p>Rust</p>
+                    </div>
                     <div class="row">
                         <div class="content">
                             <p>Click Here to visit</p>
-                            <h2>Quick-Start Serenity</h2>
+                            <h2>Quick-Start Discord Bot</h2>
                         </div>
                         <img src="assets/arrow.png" alt="Arrow">
                     </div>
@@ -79,15 +93,57 @@
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                 >
-                    <img id="banner" src="assets/projects/project-thumbnail-1.png" alt="Project 1">
-                    <div class="row">
+                    <img id="banner" src="assets/projects/coralmc.PNG" alt="Project 2">
+
+                    <div class="project-tech">
+                        <p>ReactJs</p>
+                    </div>
+
+                    <div class="row" onclick="window.open('https://github.com/imjoaosilva/CoralMc')">
                         <div class="content">
                             <p>Click Here to visit</p>
-                            <h2>Quick-Start Serenity</h2>
+                            <h2>DashBoard Example</h2>
                         </div>
                         <img src="assets/arrow.png" alt="Arrow">
                     </div>
                 </div>
+                <div class="project" 
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                >
+                    <img id="banner" src="assets/projects/todo.PNG" alt="Project 3">
+
+                    <div class="project-tech">
+                        <p>ReactJs</p>
+                    </div>
+
+                    <div class="row" onclick="window.open('https://github.com/imjoaosilva/To-Do/tree/master')">
+                        <div class="content">
+                            <p>Click Here to visit</p>
+                            <h2>Todo</h2>
+                        </div>
+                        <img src="assets/arrow.png" alt="Arrow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-experience" >
+            <h1>Work Experience</h1>
+
+            <div class="experience" data-aos="fade-up">
+                <header>
+                    <div class="left">
+                        <img src="assets/work-experience/t84933.webp" alt="Chip7">
+                        <h2>FullStack Developer Internship</h2>
+                    </div>
+                    
+                    <p>Nov 2022 - Dec 2022</p>
+                </header>
+                <h3>
+                    During my internship at Chip7, I was tasked with developing a comprehensive dashboard to efficiently manage collateral. Leveraging my experience in web development, I opted for a robust technology stack that ensured seamless functionality and a user-friendly interface.For the server-side implementation, I chose to choose Node.js using the Express library, which allows the creation of web servers in a simple and effective way.On the front-end, I used HTML, CSS and JavaScript to create a visually appealing and responsive user interface.
+                </h3>
             </div>
         </section>
 

@@ -1,7 +1,9 @@
+html { scroll-behavior: smooth; }
+
 body {
   background-color:#161513;
   overflow-x: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 ::-webkit-scrollbar {
@@ -29,14 +31,17 @@ nav {
   background-color: #222222;
   width: 100vw;
   height: 62.18px;
-  animation: fadein 3s linear;
+  animation: fadein 300ms linear;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
 nav ul {
   height: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -73,17 +78,17 @@ nav ul li a:hover {
   }
 }
 
-.home {
+#home {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  margin-top: 60px;
-  animation: fadein 3s linear;
+  margin-top: 150px;
+  animation: fadein 500ms linear;
 }
 
-.home .row {
+#home .row {
   position: relative;
   display: flex;
   justify-content: center;
@@ -91,24 +96,25 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-.home .row img {
-  right: -80px;
+#home .row img {
+  right: -57px;
   position: absolute;
   width: 50px;
+  top:40px;
 }
 
-.home .avatar {
+#home .avatar {
   background: linear-gradient(#e66465, #9198e5);
   border-radius: 50%;
 }
 
-.home .avatar img {
+#home .avatar img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
 }
 
-.home h1 {
+#home h1 {
   margin-top: 41px;
   font-weight: bolder;
   font-size: 40px;
@@ -116,7 +122,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
-.home h1 span {
+#home h1 span {
   background: -webkit-linear-gradient(#e66465, #9198e5);
   -webkit-background-clip: text;
   background-clip: text;
@@ -125,7 +131,7 @@ nav ul li a:hover {
   transition: all 0.3s;
 }
 
-.home p {
+#home p {
   margin-top: 20px;
   font-size: 16px;
   color: #C5C5C5;
@@ -133,7 +139,7 @@ nav ul li a:hover {
   max-width: 556px;
 }
 
-.home .buttons {
+#home .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +147,7 @@ nav ul li a:hover {
   gap: 18px;
 }
 
-.home button {
+#home button {
   width: 195px;
   height: 64px;
 
@@ -151,30 +157,31 @@ nav ul li a:hover {
   font-size: 18px;
 }
 
-.home button:hover {
+#home button:hover {
   cursor: pointer;
 
   transform: scale(0.99);
 }
 
-.home .primary-button {
+#home .primary-button {
   background-color: white;
   color: black;
   outline: none;
+  border: none;
 }
 
-.home .secondary-button {
+#home .secondary-button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
 }
 
-.home .secondary-button:hover {
+#home .secondary-button:hover {
   background-color: white;
   color: black;
 }
 
-.experiences {
+#experiences {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,14 +190,14 @@ nav ul li a:hover {
   margin-top: 60px;
 }
 
-.experiences h1 {
+#experiences h1 {
   color: #C5C5C5;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.experiences .techs {
+#experiences .techs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,21 +212,21 @@ nav ul li a:hover {
   height: 42px;
 }
 
-.experiences .techs img {
+#experiences .techs img {
   width: 42px;
   height: 42px;
 }
 
-.projects {
+#projects {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  margin-top: 80px;
+  margin-top: 110px;
 }
 
-.projects h1 {
+#projects h1 {
   background: -webkit-linear-gradient(#FF8660, #D5491D);
   -webkit-background-clip: text;
   background-clip: text;
@@ -236,110 +243,222 @@ nav ul li a:hover {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-
 }
 
-.projects .project{
+#projects .project{
   width: 390px;
   height: 301px;
   background-color: #2A2A2A;
-  border-radius: 18px
+  border-radius: 18px;
+  position: relative;
 }
 
-.projects .project #banner {
+#projects .project #banner {
   width: 100%;
   height: 235px;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  filter: brightness(0.4);
 }
 
-.projects .project p {
+#projects .project .project-tech {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+  display: flex;
+}
+
+#projects .project p {
   color: #C5C5C5;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bolder;
 }
 
-.projects .project h2 {
+#projects .project h2 {
   color: white;
   font-size: 18px;
   font-weight: bolder;
 }
 
-.projects .project .row {
+#projects .project .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 23px 14px;
+  padding: 5px 23px 14px;
+  transition: all 0.3s;
 }
 
-.projects .project .row img {
+#projects .project .row:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#projects .project .row img {
   width: 15px;
   height: 14.09px;
 }
 
+#work-experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 80px;
+}
+
+#work-experience h1 {
+  background: -webkit-linear-gradient(#5BADFF, #1373D1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#work-experience header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#work-experience header .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#work-experience header img {
+  height: 32px;
+}
+
+#work-experience header h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#work-experience header p {
+  color: #8491A0;
+  font-size: 14px;
+}
+
+#work-experience h3 {
+  margin-top: 23px;
+  color: #8491A0;
+  font-size: 14px;
+  text-align: justify;
+  font-weight: 400;
+  max-width: 775.58px;
+  padding-left: 2px;
+}
+
+#work-experience .experience {
+  margin-top: 40px;
+}
 
 @media only screen and (max-width: 870px) {
-  .home h1 {
+  #home h1 {
     font-size: 30px;
   }
 
-  .home p {
+  #home p {
     font-size: 14px;
   }
 
-  .experiences .techs {
+  #experiences .techs {
     max-width: 80vw;
   }
 
-  .projects .project{
+  #projects .project{
     width: 290px;
     height: 301px;
     background-color: #2A2A2A;
     border-radius: 18px
   }
   
-  .projects .project #banner {
+  #projects .project #banner {
     width: 100%;
     height: calc(100% - 66px);
     border-radius: 10px 10px 0 0;
 
     object-fit: cover;
     object-position: center;
+  }
+
+  #work-experience .experience {
+    padding: 0px 50px 0px 50px;
+  }
+
+  #work-experience h1 {
+    font-size: 25px;
+  }
+
+  #work-experience header h2 {
+    font-size: 18px;
+  }
+
+  #work-experience header p {
+    font-size: 13px;
+  }
+
+  #work-experience h3 {
+    font-size: 13px;
+  }
+
+  #work-experience .experience {
+    gap: 20px;
   }
 }
 
 
 @media only screen and (max-width: 650px) {
-  .home h1 {
+
+  nav ul {
+    gap: 20px;
+  }
+
+  #home {
+    margin-top: 100px;
+  }
+
+  #home h1 {
     font-size: 25px;
   }
 
-  .home p {
+  #home p {
     font-size: 13px;
+    margin: 20px 30px;
   }
 
-  .home button {
+  #home button {
     width: 100%;
     font-size: 16px;
     padding: 5px 25px 5px 25px;
   }
 
-  .home .buttons {
+  #home .buttons {
     gap: 10px;
+    flex-direction: column;
   }
 
-  .home .row img {
+  #home .row img {
     display: none;
   }
 
-  .projects .project{
+  #projects .project{
     width: 290px;
     height: 301px;
     background-color: #2A2A2A;
     border-radius: 18px
   }
   
-  .projects .project #banner {
+  #projects .project #banner {
     width: 100%;
     height: calc(100% - 66px);
     border-radius: 10px 10px 0 0;
@@ -347,4 +466,34 @@ nav ul li a:hover {
     object-fit: cover;
     object-position: center;
   }
+
+  #projects .project h2 {
+    font-size: 16px;
+  }
+  
+
+  #work-experience .experience {
+    padding: 0px 25px 0px 25px;
+  }
+
+  #work-experience p {
+    font-size: 12px;
+  }
+
+  #work-experience h3 {
+    font-size: 12px;
+  }
+
+  #work-experience header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  #work-experience header h2 {
+    font-size: 15px;
+  }
+
 }

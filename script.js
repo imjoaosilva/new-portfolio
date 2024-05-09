@@ -11,5 +11,5 @@ typeWriter.typeString("João Silva")
     .pauseFor(1000)
     .deleteChars(20)
     .typeString("software engineer")
-    .pauseFor(2500)
+    .pauseFor(1500)
     .start();
