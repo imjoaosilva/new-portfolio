@@ -1,159 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>João Silva Portfolio</title>
-        <link rel="stylesheet" href="style.css">
 
-        <meta name="description" content="Find out more about me and my career!">
-        <meta name="theme-color" content="#9198e5">
-        <meta property="og:type" content="profile">
-        <meta property="og:title" content="João Silva Portfolio">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
-        <meta property="og:description" content="Find out more about me and my career!">
-        <meta property="profile:first_name" content="João">
-        <meta property="profile:last_name" content="Silva">
-        <meta property="profile:username" content="imjoaosilva">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Silva Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="top">&nbsp;</div>
-        <nav>
-            <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#">Experience</a></li>
-            </ul>
-        </nav>
-        <section id="home">
-            <div class="avatar">
-                <img src="assets/Avatar.gif" alt="Avatar">
+    <meta name="description" content="Find out more about me and my career!">
+    <meta name="theme-color" content="#9198e5">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="João Silva Portfolio">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Find out more about me and my career!">
+    <meta property="profile:first_name" content="João">
+    <meta property="profile:last_name" content="Silva">
+    <meta property="profile:username" content="imjoaosilva">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">&nbsp;</div>
+    <nav>
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#">Experience</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="avatar">
+            <img src="assets/Avatar.gif" alt="Avatar">
+        </div>
+
+        <header>
+            <div class="row">
+                <h1>Hello! I'm <span id="name"></span></h1>
+                <img src="assets/wave.gif" alt="Developer">
             </div>
+        </header>
+        <p>
+            I am an experienced full-stack developer, with solid knowledge in several technologies. My passion is
+            creating efficient and secure solutions that meet the needs of users and companies.
+        </p>
 
+        <div class="buttons">
+            <button class="primary-button" onclick="window.open('mailto:contactojoaosilva@gmail.com')">Get in
+                Touch</button>
+            <button class="secondary-button" onclick="window.open('https://github.com/imjoaosilva')">Github</button>
+        </div>
+    </section>
+    <section id="experiences">
+        <h1>experience with</h1>
+
+        <div class="techs">
+            <img data-aos="zoom-in-up" src="assets/techs/css.png" alt="CSS">
+            <img data-aos="zoom-in-up" src="assets/techs/html.png" alt="HTML">
+            <img data-aos="zoom-in-up" src="assets/techs/javascript.png" alt="JavaScript">
+            <img data-aos="zoom-in-up" src="assets/techs/typescript.png" alt="Node.js">
+            <img data-aos="zoom-in-up" src="assets/techs/nodejs.png" alt="Node.js">
+            <img data-aos="zoom-in-up" src="assets/techs/reactjs.png" alt="React">
+            <img data-aos="zoom-in-up" src="assets/techs/eLECTRON.png" alt="Electron">
+            <img data-aos="zoom-in-up" id="tailwind" src="assets/techs/Tailwind.png" alt="Tailwind">
+            <img data-aos="zoom-in-up" src="assets/techs/GIT.png" alt="GIT">
+            <img data-aos="zoom-in-up" src="assets/techs/Rust.png" alt="RUST">
+
+        </div>
+    </section>
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="projects-container">
+            <div class="project" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <img id="banner" src="assets/projects/serenity-bot.jpg" alt="Project 1">
+
+                <div class="project-tech">
+                    <p>Rust</p>
+                </div>
+                <div class="row" onclick="window.open('https://github.com/imjoaosilva/rust-discord-bot')">
+                    <div class="content">
+                        <p>Click Here to visit</p>
+                        <h2>Quick-Start Discord Bot</h2>
+                    </div>
+                    <img src="assets/arrow.png" alt="Arrow">
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <img id="banner" src="assets/projects/coralmc.PNG" alt="Project 2">
+
+                <div class="project-tech">
+                    <p>ReactJs</p>
+                </div>
+
+                <div class="row" onclick="window.open('https://github.com/imjoaosilva/CoralMc')">
+                    <div class="content">
+                        <p>Click Here to visit</p>
+                        <h2>DashBoard Example</h2>
+                    </div>
+                    <img src="assets/arrow.png" alt="Arrow">
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <img id="banner" src="assets/projects/todo.PNG" alt="Project 3">
+
+                <div class="project-tech">
+                    <p>ReactJs</p>
+                </div>
+
+                <div class="row" onclick="window.open('https://github.com/imjoaosilva/To-Do/tree/master')">
+                    <div class="content">
+                        <p>Click Here to visit</p>
+                        <h2>Todo</h2>
+                    </div>
+                    <img src="assets/arrow.png" alt="Arrow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work-experience">
+        <h1>Work Experience</h1>
+
+        <div class="experience" data-aos="fade-up">
             <header>
-                <div class="row">
-                    <h1>Hello! I'm <span id="name"></span></h1>
-                    <img src="assets/wave.gif" alt="Developer">
+                <div class="left">
+                    <img src="assets/work-experience/t84933.webp" alt="Chip7">
+                    <h2>FullStack Developer Internship</h2>
                 </div>
+
+                <p>Nov 2022 - Dec 2022</p>
             </header>
-            <p>
-                I am an experienced full-stack developer, with solid knowledge in several technologies. My passion is creating efficient and secure solutions that meet the needs of users and companies.
-            </p>
+            <h3>
+                During my internship at Chip7, I was tasked with developing a comprehensive dashboard to efficiently
+                manage collateral. Leveraging my experience in web development, I opted for a robust technology stack
+                that ensured seamless functionality and a user-friendly interface.For the server-side implementation, I
+                chose to choose Node.js using the Express library, which allows the creation of web servers in a simple
+                and effective way.On the front-end, I used HTML, CSS and JavaScript to create a visually appealing and
+                responsive user interface.
+            </h3>
+        </div>
 
-            <div class="buttons">
-                <button class="primary-button" onclick="window.open('mailto:contactojoaosilva@gmail.com')">Get in Touch</button>
-                <button class="secondary-button" onclick="window.open('https://github.com/imjoaosilva')">Github</button>
-            </div>
-        </section>
-        <section id="experiences">
-            <h1>experience with</h1>
-
-            <div class="techs">
-                <img data-aos="zoom-in-up" src="assets/techs/css.png" alt="CSS">
-                <img data-aos="zoom-in-up" src="assets/techs/html.png" alt="HTML">
-                <img data-aos="zoom-in-up" src="assets/techs/javascript.png" alt="JavaScript">
-                <img data-aos="zoom-in-up" src="assets/techs/typescript.png" alt="Node.js">
-                <img data-aos="zoom-in-up" src="assets/techs/nodejs.png" alt="Node.js">
-                <img data-aos="zoom-in-up" src="assets/techs/reactjs.png" alt="React">
-                <img data-aos="zoom-in-up" src="assets/techs/eLECTRON.png" alt="Electron">
-                <img data-aos="zoom-in-up" id="tailwind" src="assets/techs/Tailwind.png" alt="Tailwind">
-                <img data-aos="zoom-in-up" src="assets/techs/GIT.png" alt="GIT">
-                <img data-aos="zoom-in-up" src="assets/techs/Rust.png" alt="RUST">
-                
-            </div>
-        </section>
-        <section id="projects">
-            <h1>Projects</h1>
-            <div class="projects-container">
-                <div class="project" 
-                    data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine"
-                >
-                    <img id="banner" src="assets/projects/serenity-bot.jpg" alt="Project 1">
-
-                    <div class="project-tech">
-                        <p>Rust</p>
-                    </div>
-                    <div class="row" onclick="window.open('https://github.com/imjoaosilva/rust-discord-bot')">
-                        <div class="content">
-                            <p>Click Here to visit</p>
-                            <h2>Quick-Start Discord Bot</h2>
-                        </div>
-                        <img src="assets/arrow.png" alt="Arrow">
-                    </div>
+        <div class="experience" data-aos="fade-up">
+            <header>
+                <div class="left">
+                    <img src="assets/work-experience/goucam.png" alt="Goucam">
+                    <h2>FullStack Developer</h2>
                 </div>
-                <div class="project" 
-                    data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine"
-                >
-                    <img id="banner" src="assets/projects/coralmc.PNG" alt="Project 2">
 
-                    <div class="project-tech">
-                        <p>ReactJs</p>
-                    </div>
+                <p>March 2024 - Aug 2024</p>
+            </header>
+            <h3>
+                During my time at Goucam Group, I was assigned a project to develop a system for analyzing resumes,
+                utilizing data from SQL Server to gather and process project information. For the back-end, I
+                implemented the system using Node.js with the Express framework, ensuring efficient data handling and
+                API integration. On the front-end, I opted for React, taking advantage of its component-based
+                architecture to build a dynamic and responsive user interface that provided a smooth experience for
+                users. This project allowed me to further enhance my skills in full-stack development while delivering a
+                solution that streamlined the resume analysis process for the company. Additionally, I had the
+                opportunity to oversee the assembly of the new server rack at the company's new headquarters. This
+                experience allowed me to work closely with the technical team, ensuring that all network equipment and
+                infrastructure were set up correctly and efficiently. I gained valuable hands-on knowledge in hardware
+                installation and network configuration, complementing my software development skills with practical
+                experience in managing physical IT infrastructure.
+            </h3>
+        </div>
+    </section>
 
-                    <div class="row" onclick="window.open('https://github.com/imjoaosilva/CoralMc')">
-                        <div class="content">
-                            <p>Click Here to visit</p>
-                            <h2>DashBoard Example</h2>
-                        </div>
-                        <img src="assets/arrow.png" alt="Arrow">
-                    </div>
-                </div>
-                <div class="project" 
-                    data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine"
-                >
-                    <img id="banner" src="assets/projects/todo.PNG" alt="Project 3">
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
 
-                    <div class="project-tech">
-                        <p>ReactJs</p>
-                    </div>
+</body>
 
-                    <div class="row" onclick="window.open('https://github.com/imjoaosilva/To-Do/tree/master')">
-                        <div class="content">
-                            <p>Click Here to visit</p>
-                            <h2>Todo</h2>
-                        </div>
-                        <img src="assets/arrow.png" alt="Arrow">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="work-experience" >
-            <h1>Work Experience</h1>
-
-            <div class="experience" data-aos="fade-up">
-                <header>
-                    <div class="left">
-                        <img src="assets/work-experience/t84933.webp" alt="Chip7">
-                        <h2>FullStack Developer Internship</h2>
-                    </div>
-                    
-                    <p>Nov 2022 - Dec 2022</p>
-                </header>
-                <h3>
-                    During my internship at Chip7, I was tasked with developing a comprehensive dashboard to efficiently manage collateral. Leveraging my experience in web development, I opted for a robust technology stack that ensured seamless functionality and a user-friendly interface.For the server-side implementation, I chose to choose Node.js using the Express library, which allows the creation of web servers in a simple and effective way.On the front-end, I used HTML, CSS and JavaScript to create a visually appealing and responsive user interface.
-                </h3>
-            </div>
-        </section>
-
-        <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
-        <script src="script.js"></script>
-
-    </body>
 </html>
